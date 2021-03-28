@@ -69,7 +69,7 @@
 ```
 
 
-##Vue.js
+## Vue.js
 
 ### 1. Predtým, než začneme 
 
@@ -138,7 +138,33 @@ Na odoslanie dát budeme potrebovať dalšiu knižnicu `axios`
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 ```
 
-
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        name: '',
+        email: '',
+        message: '',
+        errorMessage: '',
+        successMessage: '',
+    },
+    methods: {
+        sendEmail(){
+            axios.post('http://kurz2.webtip.sk/mail.php', {
+                name,
+                email,
+                message,
+            }, {headers: {"Content-Type": "multipart/form-data"},})
+                .then((res) => {
+                    console.log(res);
+                 })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+    },
+});
+```
 
 ### 5. Pridanie spinnera
 ```html
