@@ -24,19 +24,19 @@
 ```
 
 ### 2. Containery 
-#### Základný container
+#### 2.1 Základný container
 ```html
 <div class="container">
     Hello, world!  
 </div>
 ```
-#### Fluid container zaberá celú šírku
+#### 2.2 Fluid container zaberá celú šírku
 ```html
 <div class="container-fluid">
     Hello, world!
 </div>
 ```
-#### Responzívne containery
+#### 2.3 Responzívne containery
 ```html
 <div class="container-sm">100% wide until small breakpoint</div>
 <div class="container-md">100% wide until medium breakpoint</div>
@@ -60,14 +60,42 @@
   </div>
 </div>
 ```
+### 3. Navbar
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+```
 
-### 4. Navbar
+### 4. Navbar + farby
 ```html
 <nav class="navbar navbar-dark bg-primary">
     <!-- Navbar content -->
 </nav>
 ```
-
 
 ## Vue.js
 
@@ -118,9 +146,7 @@ new Vue({
   },
 });
 ```
-
-
-### 4. Vytvorenie formulára
+### 3. Vytvorenie formulára
 ```html
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -132,7 +158,7 @@ new Vue({
 </div>
 ```
 
-### 5. Odoslanie formulára
+### 4. Odoslanie formulára
 Na odoslanie dát budeme potrebovať dalšiu knižnicu `axios`
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
